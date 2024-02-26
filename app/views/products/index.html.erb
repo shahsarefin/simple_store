@@ -7,9 +7,11 @@
         # <strong>Price:</Strong> <%= product.price %><br>
         # <strong>Stock Quantity:</Strong> <%= product.stock_quantity %>
 
-        <%= link_to product.title, product_path(product) %> <br>
-        <strong>Price:</strong> <%= number_to_currency(product.price) %><br>
-        <strong>Stock Quantity:</strong> <%= product.stock_quantity %>
-        </li>
+        <li>
+      <%= link_to product.title, product_path(product) %><br>
+      <strong>Category:</strong> <%= product.category.name %><br>
+      <strong>Price:</strong> <%= number_to_currency(product.price) %><br>
+      <strong>Stock Quantity:</strong> <%= product.stock_quantity %>
+    </li>
     <% end %>
 </ul>
