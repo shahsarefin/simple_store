@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Simple Store Application
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+The Simple Store application is a basic Ruby on Rails, demonstrating a practical implementation of a web application with product and category models. It showcases how to create models, associate them, seed data using both Faker and a CSV file, and apply custom CSS for enhanced presentation.
 
-* System dependencies
+## Features
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- **Operations**: showing Data in products and show page.
+- **Model Associations**: Establish relationships between products and category table.
+- **Data Seeding**: Utilize Faker for generating mock data and a CSV file for importing real data.
+- **Custom Styling**: Applied some CSS for structured display of products.
