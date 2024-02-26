@@ -1,17 +1,20 @@
+<%= stylesheet_link_tag 'products', media: 'all', 'data-turbolinks-track': 'reload' %>
+
 <h1>Simple Store Products</h1>
 
-<ul> 
-    <% @products.each do |product| %>
-        <li> 
-        # <strong>Title:</Strong> <%= product.title %><br>
-        # <strong>Price:</Strong> <%= product.price %><br>
-        # <strong>Stock Quantity:</Strong> <%= product.stock_quantity %>
-
-        <li>
-      <%= link_to product.title, product_path(product) %><br>
-      <strong>Category:</strong> <%= product.category.name %><br>
-      <strong>Price:</strong> <%= number_to_currency(product.price) %><br>
-      <strong>Stock Quantity:</strong> <%= product.stock_quantity %>
-    </li>
-    <% end %>
-</ul>
+<div class="products-container">
+  <% @products.each_slice(5) do |product_slice| %>
+    <div class="row">
+      <% product_slice.each do |product| %>
+        <div class="column">
+          <div class="product">
+            <%= link_to product.title, product_path(product) %><br>
+            <strong>Category:</strong> <%= product.category.name %><br>
+            <strong>Price:</strong> <%= number_to_currency(product.price) %><br>
+            <strong>Stock Quantity:</strong> <%= product.stock_quantity %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
