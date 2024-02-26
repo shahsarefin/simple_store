@@ -3,9 +3,13 @@
 <ul> 
     <% @products.each do |product| %>
         <li> 
-        <strong>Title:</Strong> <%= product.title %><br>
-        <strong>Price:</Strong> <%= product.price %><br>
-        <strong>Stock Quantity:</Strong> <%= product.stock_quantity %>
+        # <strong>Title:</Strong> <%= product.title %><br>
+        # <strong>Price:</Strong> <%= product.price %><br>
+        # <strong>Stock Quantity:</Strong> <%= product.stock_quantity %>
+
+        <%= link_to product.title, product_path(product) %> <br>
+        <strong>Price:</strong> <%= number_to_currency(product.price) %><br>
+        <strong>Stock Quantity:</strong> <%= product.stock_quantity %>
         </li>
     <% end %>
 </ul>
