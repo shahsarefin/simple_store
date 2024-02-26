@@ -2,6 +2,9 @@ source "https://rubygems.org"
 
 ruby "3.3.0"
 
+# Gem added by developer
+gem "faker" # A library for generating fake data 
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
 
